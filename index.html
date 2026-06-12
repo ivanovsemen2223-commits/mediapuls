@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>МЕДИАПУЛЬС — диджитал-агентство</title>
+<meta name="description" content="Диджитал-агентство МЕДИАПУЛЬС: разработка сайтов, контекстная реклама, SMM и SEO. Выводим бизнес на новый уровень.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --black:#111;
+  --white:#fff;
+  --grey:#8a8a8a;
+  --line:#1a1a1a;
+  --pad:clamp(16px,4vw,56px);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Inter',sans-serif;
+  background:var(--white);
+  color:var(--black);
+  font-size:15px;
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:1280px;margin:0 auto;padding-left:var(--pad);padding-right:var(--pad)}
+h1,h2,h3{font-family:'Inter Tight',sans-serif;font-weight:900;text-transform:uppercase;line-height:.95}
+
+/* ---------- NAV ---------- */
+nav{display:flex;justify-content:space-between;align-items:center;padding:28px 0 10px}
+nav a{
+  font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--black);text-decoration:none;position:relative;
+}
+nav a::after{content:"";position:absolute;left:0;bottom:-4px;width:0;height:1px;background:var(--black);transition:width .25s}
+nav a:hover::after{width:100%}
+
+/* ---------- HERO ---------- */
+.hero-title{
+  font-size:clamp(48px,12.4vw,176px);
+  letter-spacing:-.02em;
+  margin-top:8px;
+  white-space:nowrap;
+}
+.hero-sub{
+  display:flex;justify-content:space-between;align-items:flex-start;gap:40px;
+  margin:34px 0 38px;flex-wrap:wrap;
+}
+.hero-sub p{max-width:560px;font-size:14px}
+.btn{
+  display:inline-flex;align-items:center;gap:12px;
+  background:var(--black);color:var(--white);
+  font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
+  padding:15px 26px;border:1px solid var(--black);
+  text-decoration:none;cursor:pointer;white-space:nowrap;
+  transition:background .2s,color .2s;
+  font-family:'Inter',sans-serif;
+}
+.btn:hover{background:var(--white);color:var(--black)}
+.btn .arr{font-size:14px;line-height:1}
+.hero-img{width:100%;height:clamp(240px,46vw,560px);object-fit:cover;display:block;filter:grayscale(1) contrast(1.05)}
+
+/* ---------- ABOUT ---------- */
+.section{padding:clamp(64px,9vw,130px) 0 0}
+.center-head{text-align:center}
+.center-head h2{font-size:clamp(34px,5.6vw,72px);letter-spacing:-.01em}
+.center-head p{max-width:480px;margin:26px auto 0;font-size:14px}
+.values{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:18px;
+  margin-top:64px;
+}
+.vcard{
+  border:1px solid var(--line);
+  min-height:218px;
+  padding:20px;
+  display:flex;flex-direction:column;justify-content:space-between;
+}
+.vcard .arrow-big{font-size:34px;text-align:right;line-height:1}
+.vcard .vtitle{font-size:13px;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+.vcard .vtext{font-size:13.5px;margin-top:auto}
+.vcard.lead .vtitle{font-size:19px;font-weight:600;letter-spacing:.02em}
+.vcard:not(.lead) .vtitle{margin-bottom:42px}
+
+/* ---------- SERVICES ---------- */
+.services{display:grid;grid-template-columns:1fr 1.35fr;gap:clamp(32px,6vw,90px);align-items:start}
+.services-left h2{font-size:clamp(36px,5.2vw,66px)}
+.services-left p{margin:28px 0 0;font-size:14px;max-width:340px}
+.services-left .btn{margin-top:120px}
+.slist{border-bottom:0}
+.sitem{
+  border-top:1px solid var(--line);
+  padding:22px 0 26px;
+  display:grid;grid-template-columns:1fr auto;gap:24px;
+}
+.sitem:last-child{border-bottom:1px solid var(--line)}
+.sitem h3{font-size:14px;letter-spacing:.04em;font-weight:800}
+.sitem p{font-size:13.5px;margin-top:10px;max-width:520px}
+.snum{color:var(--grey);font-size:13px;font-weight:500;padding-top:2px}
+
+/* ---------- TEAM ---------- */
+.team-head{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;flex-wrap:wrap}
+.team-head h2{font-size:clamp(34px,5.6vw,72px);letter-spacing:-.01em}
+.team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:56px}
+.tcard{border:1px solid var(--line)}
+.tcard img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block;filter:grayscale(1) contrast(1.05)}
+.tcard .tinfo{padding:16px 18px 20px;border-top:1px solid var(--line)}
+.tcard .tname{font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:.03em}
+.tcard .trole{font-size:12.5px;color:var(--grey);margin-top:5px}
+
+/* ---------- FEEDBACK ---------- */
+.fb-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:56px}
+.fbcard{border:1px solid var(--line);padding:26px 24px;display:flex;flex-direction:column;gap:26px;min-height:240px}
+.fbcard .quote{font-size:14px}
+.fbcard .who{margin-top:auto}
+.fbcard .who b{display:block;font-size:13px;text-transform:uppercase;letter-spacing:.04em}
+.fbcard .who span{font-size:12.5px;color:var(--grey)}
+
+/* ---------- CTA ---------- */
+.cta{background:var(--black);color:var(--white);margin-top:clamp(64px,9vw,130px);padding:clamp(64px,8vw,110px) 0}
+.cta h2{font-size:clamp(34px,5.6vw,72px);letter-spacing:-.01em}
+.cta p{max-width:480px;margin:24px 0 44px;font-size:14px;color:#c9c9c9}
+.cta-form{display:grid;grid-template-columns:1fr 1fr auto;gap:14px;max-width:880px}
+.cta-form input{
+  background:transparent;border:1px solid #555;color:var(--white);
+  padding:15px 18px;font-size:14px;font-family:'Inter',sans-serif;outline:none;
+}
+.cta-form input::placeholder{color:#888}
+.cta-form input:focus{border-color:var(--white)}
+.btn.invert{background:var(--white);color:var(--black);border-color:var(--white)}
+.btn.invert:hover{background:transparent;color:var(--white)}
+.form-ok{display:none;font-size:15px;margin-top:26px;color:var(--white)}
+
+/* ---------- FOOTER ---------- */
+footer{padding:34px 0;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+footer .logo{font-family:'Inter Tight',sans-serif;font-weight:900;font-size:18px;text-transform:uppercase}
+footer .fmeta{font-size:12.5px;color:var(--grey)}
+footer a{color:var(--black);text-decoration:none;font-size:12.5px}
+footer a:hover{text-decoration:underline}
+footer .fcontacts{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+
+/* ---------- RESPONSIVE ---------- */
+@media(max-width:980px){
+  .values{grid-template-columns:repeat(2,1fr)}
+  .team-grid{grid-template-columns:repeat(2,1fr)}
+  .fb-grid{grid-template-columns:1fr}
+  .services{grid-template-columns:1fr}
+  .services-left .btn{margin-top:36px}
+}
+@media(max-width:640px){
+  nav{gap:14px;flex-wrap:wrap;justify-content:flex-start}
+  .values{grid-template-columns:1fr}
+  .team-grid{grid-template-columns:1fr}
+  .cta-form{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <nav>
+    <a href="#about">О нас</a>
+    <a href="#services">Услуги</a>
+    <a href="#team">Команда</a>
+    <a href="#feedback">Отзывы</a>
+  </nav>
+
+  <h1 class="hero-title"><span>Медиапульс</span></h1>
+
+  <div class="hero-sub">
+    <p>Мы создаём эффективные стратегии, которые выводят ваш бизнес на новый уровень. Привлечение клиентов, рост продаж или узнаваемость бренда — мы знаем, как сделать это максимально эффективно.</p>
+    <a class="btn" href="#request">Оставить заявку <span class="arr">↗</span></a>
+  </div>
+
+  <img class="hero-img" src="assets/hero.jpg" alt="Абстрактный жидкий металл">
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="center-head">
+      <h2>Об агентстве</h2>
+      <p>Мы — команда профессионалов, объединённых одной целью: помочь вашему бизнесу развиваться в современном цифровом мире.</p>
+    </div>
+    <div class="values">
+      <div class="vcard lead">
+        <div class="arrow-big">↗</div>
+        <div class="vtitle">Наши ценности</div>
+      </div>
+      <div class="vcard">
+        <div class="vtitle">Прозрачность</div>
+        <div class="vtext">Ведём проекты открыто и даём вам полный доступ ко всем этапам работы.</div>
+      </div>
+      <div class="vcard">
+        <div class="vtitle">Результат</div>
+        <div class="vtext">Всегда фокусируемся исключительно на достижении поставленных целей.</div>
+      </div>
+      <div class="vcard">
+        <div class="vtitle">Инновации</div>
+        <div class="vtext">Постоянно ищем новые подходы и технологии, чтобы быть впереди конкурентов.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section" id="services">
+    <div class="services">
+      <div class="services-left">
+        <h2>С чем мы<br>работаем</h2>
+        <p>Привлечение клиентов, рост продаж или узнаваемость бренда — мы знаем, как сделать это максимально эффективно.</p>
+        <a class="btn" href="#request">Оставить заявку <span class="arr">↗</span></a>
+      </div>
+      <div class="slist">
+        <div class="sitem">
+          <div>
+            <h3>Разработка сайтов</h3>
+            <p>Создадим современный и удобный сайт, который привлечёт внимание ваших клиентов и превратит их в покупателей.</p>
+          </div>
+          <div class="snum">01 /</div>
+        </div>
+        <div class="sitem">
+          <div>
+            <h3>Контекстная реклама</h3>
+            <p>Настроим рекламные кампании в Google Ads и Яндекс Директе так, чтобы они приносили максимум прибыли при минимальных затратах.</p>
+          </div>
+          <div class="snum">02 /</div>
+        </div>
+        <div class="sitem">
+          <div>
+            <h3>SMM-продвижение</h3>
+            <p>Разработаем контент-стратегию и возьмём на себя ведение соцсетей: привлечём целевую аудиторию и повысим лояльность к бренду.</p>
+          </div>
+          <div class="snum">03 /</div>
+        </div>
+        <div class="sitem">
+          <div>
+            <h3>SEO-оптимизация</h3>
+            <p>Поможем вашему сайту занять лидирующие позиции в поисковой выдаче и обеспечим стабильный поток органического трафика.</p>
+          </div>
+          <div class="snum">04 /</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section class="section" id="team">
+    <div class="team-head">
+      <h2>Команда специалистов</h2>
+      <a class="btn" href="#request">Оставить заявку <span class="arr">↗</span></a>
+    </div>
+    <div class="team-grid">
+      <div class="tcard">
+        <img src="assets/team1.jpg" alt="Артём Климов">
+        <div class="tinfo">
+          <div class="tname">Артём Климов</div>
+          <div class="trole">Руководитель проектов</div>
+        </div>
+      </div>
+      <div class="tcard">
+        <img src="assets/team2.jpg" alt="Дарья Соколова">
+        <div class="tinfo">
+          <div class="tname">Дарья Соколова</div>
+          <div class="trole">Контекстная реклама</div>
+        </div>
+      </div>
+      <div class="tcard">
+        <img src="assets/team3.jpg" alt="Михаил Орлов">
+        <div class="tinfo">
+          <div class="tname">Михаил Орлов</div>
+          <div class="trole">Веб-разработка</div>
+        </div>
+      </div>
+      <div class="tcard">
+        <img src="assets/team4.jpg" alt="Полина Ветрова">
+        <div class="tinfo">
+          <div class="tname">Полина Ветрова</div>
+          <div class="trole">SMM и контент</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEEDBACK -->
+  <section class="section" id="feedback">
+    <div class="center-head">
+      <h2>Отзывы клиентов</h2>
+    </div>
+    <div class="fb-grid">
+      <div class="fbcard">
+        <div class="quote">«За три месяца работы с агентством заявки с сайта выросли вдвое, а стоимость лида снизилась на 40%. Работают чётко и по делу».</div>
+        <div class="who"><b>Сергей Мельников</b><span>Сеть автосервисов «Механика»</span></div>
+      </div>
+      <div class="fbcard">
+        <div class="quote">«Сделали нам новый сайт и настроили рекламу под ключ. Впервые вижу подрядчика, который сам предлагает, что улучшить, а не ждёт ТЗ».</div>
+        <div class="who"><b>Анна Гусева</b><span>Студия интерьеров AG Design</span></div>
+      </div>
+      <div class="fbcard">
+        <div class="quote">«Вышли в топ-3 по ключевым запросам за полгода. Органический трафик стал основным каналом продаж».</div>
+        <div class="who"><b>Игорь Савельев</b><span>Интернет-магазин «СтройДвор»</span></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- CTA -->
+<section class="cta" id="request">
+  <div class="wrap">
+    <h2>Обсудим ваш проект?</h2>
+    <p>Оставьте контакты — мы свяжемся с вами в течение рабочего дня, разберём задачу и предложим план продвижения.</p>
+    <form class="cta-form" id="leadForm">
+      <input type="text" name="name" placeholder="Ваше имя" required>
+      <input type="tel" name="phone" placeholder="Телефон или Telegram" required>
+      <button class="btn invert" type="submit">Оставить заявку <span class="arr">↗</span></button>
+    </form>
+    <div class="form-ok" id="formOk">Спасибо! Заявка отправлена — скоро свяжемся с вами.</div>
+  </div>
+</section>
+
+<div class="wrap">
+  <footer>
+    <div class="logo">Медиапульс</div>
+    <div class="fmeta">Диджитал-агентство полного цикла</div>
+    <div class="fcontacts">
+      <a href="mailto:hello@mediapulse.ru">hello@mediapulse.ru</a>
+      <a href="https://t.me/Frilste" target="_blank" rel="noopener">Telegram&nbsp;@Frilste</a>
+    </div>
+  </footer>
+</div>
+
+<script>
+function fitHeroTitle(){
+  var h=document.querySelector('.hero-title');
+  var s=h.querySelector('span');
+  var base=100;
+  h.style.fontSize=base+'px';
+  var w=s.getBoundingClientRect().width;
+  var target=h.clientWidth;
+  if(w>0){h.style.fontSize=(base*target/w).toFixed(2)+'px';}
+  h.classList.add('fitted');
+}
+fitHeroTitle();
+window.addEventListener('resize',fitHeroTitle);
+if(document.fonts&&document.fonts.ready){document.fonts.ready.then(fitHeroTitle);}
+window.addEventListener('load',fitHeroTitle);
+document.getElementById('leadForm').addEventListener('submit',function(e){
+  e.preventDefault();
+  this.style.display='none';
+  document.getElementById('formOk').style.display='block';
+});
+</script>
+</body>
+</html>
